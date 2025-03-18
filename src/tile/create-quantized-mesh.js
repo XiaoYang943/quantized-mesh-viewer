@@ -1,4 +1,4 @@
-import decode, {DECODING_STEPS} from '@here/quantized-mesh-decoder'
+import decode, {DECODING_STEPS} from '../decoder/index'
 import {loadMesh} from "../utils/load";
 
 const THREE = window.THREE

@@ -1,4 +1,4 @@
-import { DECODING_STEPS } from '@here/quantized-mesh-decoder'
+import { DECODING_STEPS } from '../decoder/index'
 import dat from 'dat.gui'
 import * as THREE from 'three'
 

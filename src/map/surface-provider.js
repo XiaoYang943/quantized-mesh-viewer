@@ -1,5 +1,5 @@
 import Cesium from 'cesium'
-import decode from '@here/quantized-mesh-decoder'
+import decode from '../decoder/index'
 
 import dummyTileBuffer from './dummy-tile'
 
