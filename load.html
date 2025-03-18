@@ -4,7 +4,7 @@
 </head>
 
 <body>
-<script src="cesium-quantized-mesh-terrain-format-logger.js"></script>
+<script src="/src/logger/cesium-quantized-mesh-terrain-format-logger.js"></script>
 <script>
     function loadTerrain() {
         var xhr = new XMLHttpRequest();
@@ -24,12 +24,29 @@
         return false;
     }
 </script>
+<script type="module">
+    import {loadMesh} from "/src/utils/load.js"
 
+    function loadTerrainLocal() {
+        console.log(document.terrainLocal['url'].value)
+        loadMesh(document.terrainLocal['url'].value)
+            .then((res) => {
+                console.log("res",res)
+                loadQuantizedMeshTerrainData(res);
+                document.getElementById("result").style.display = "block";
+            })
+        return false;
+    }
+    window.loadTerrainLocal = loadTerrainLocal;
+</script>
 <form name="terrain" action="javascript:loadTerrain();">
     <input type="text" name="url" value="URL" />
     <input name="Submit" type="submit" value="Load" />
 </form>
-
+<form name="terrainLocal" action="javascript:loadTerrainLocal();">
+    <input type="text" name="url" value="/example-tiles/13/1312/5176.terrain" />
+    <input name="Submit" type="submit" value="LoadLocal" />
+</form>
 <div id="result" style="display:none;">
     <div id="headerTitle">QuantizedMeshHeader</div>
     <table border="1" id="header">
