@@ -1,6 +1,6 @@
 import Cesium from 'cesium'
 import SurfaceProvider from './surface-provider'
-
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ODc1ZDQ0NS1jZjE4LTQzODAtYWQyOS0yNGRlNmUxYTZjNjIiLCJpZCI6OTc3MTIsImlhdCI6MTY1NTI5NjI4MH0.7eBfoYezobFOl0NzTONtoMyB1HnYcFfm9Azn6jimImU'
 const container = document.getElementById('cesium-container')
 const tilingScheme = new Cesium.WebMercatorTilingScheme()
 
