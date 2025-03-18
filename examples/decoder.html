@@ -1,6 +1,20 @@
 <html>
 <head>
     <title>Cesium Quantized Mesh Terrain Format Logger</title>
+    <style>
+        .table-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .table-group table {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,55 +61,66 @@
     <input type="text" name="url" value="/example-tiles/13/1312/5176.terrain" />
     <input name="Submit" type="submit" value="LoadLocal" />
 </form>
-<div id="result" style="display:none;">
-    <div id="headerTitle">QuantizedMeshHeader</div>
-    <table border="1" id="header">
-        <tr><th>Field</th><th>Value</th></tr>
-    </table>
+<div id="result" style="overflow-x: auto;display: flex;white-space: nowrap;">
+    <div id="titlesContainer" style="display: flex;">
+        <div class="table-group">
+            <div id="headerTitle">QuantizedMeshHeader</div>
+            <table border="1" id="header">
+                <tr><th>Field</th><th>Value</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="verticesTitle">Vertices</div>
-    <table border="1" id="vertices">
-        <tr><th colspan="3">Encoded (u, v, h)</th><th colspan="3">Decoded (u, v, h)</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="verticesTitle">Vertices</div>
+            <table border="1" id="vertices">
+                <tr><th colspan="3">Encoded (u, v, h)</th><th colspan="3">Decoded (u, v, h)</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="trianglesTitle">Triangles</div>
-    <table border="1" id="triangles">
-        <tr><th>#</th><th colspan="3">Indices</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="trianglesTitle">Triangles</div>
+            <table border="1" id="triangles">
+                <tr><th>#</th><th colspan="3">Indices</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="westTitle">West indices</div>
-    <table border="1" id="west">
-        <tr><th>#</th><th>Indices</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="westTitle">West indices</div>
+            <table border="1" id="west">
+                <tr><th>#</th><th>Indices</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="southTitle">South indices</div>
-    <table border="1" id="south">
-        <tr><th>#</th><th>Indices</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="southTitle">South indices</div>
+            <table border="1" id="south">
+                <tr><th>#</th><th>Indices</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="eastTitle">East indices</div>
-    <table border="1" id="east">
-        <tr><th>#</th><th>Indices</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="eastTitle">East indices</div>
+            <table border="1" id="east">
+                <tr><th>#</th><th>Indices</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="northTitle">North indices</div>
-    <table border="1" id="north">
-        <tr><th>#</th><th>Indices</th></tr>
-    </table>
+        <div class="table-group">
+            <div id="northTitle">North indices</div>
+            <table border="1" id="north">
+                <tr><th>#</th><th>Indices</th></tr>
+            </table>
+        </div>
 
-    <br/><br/>
-    <div id="extNormalsTitle">Extension: vertex normals</div>
-    <table border="1" id="normals">
-        <tr><th colspan="2">Encoded (x, y)</th><th colspan="3">Decoded (x, y, z)</th></tr>
-    </table>
-
+        <div class="table-group">
+            <div id="extNormalsTitle">Extension: vertex normals</div>
+            <table border="1" id="normals">
+                <tr><th colspan="2">Encoded (x, y)</th><th colspan="3">Decoded (x, y, z)</th></tr>
+            </table>
+        </div>
+    </div>
 </div>
+
 
 </body>
 
