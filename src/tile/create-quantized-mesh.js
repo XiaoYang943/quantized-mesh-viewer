@@ -1,17 +1,7 @@
-import decode, { DECODING_STEPS } from '@here/quantized-mesh-decoder'
+import decode, {DECODING_STEPS} from '@here/quantized-mesh-decoder'
+import {loadMesh} from "../utils/load";
 
 const THREE = window.THREE
-
-function loadMesh (path) {
-  return window.fetch(path)
-    .then(res => {
-      if (res.status !== 200) {
-        throw new Error('Could not load the mesh')
-      }
-
-      return res.arrayBuffer()
-    })
-}
 
 function signNotZero (vector) {
   return new THREE.Vector2(
