@@ -1,0 +1,29 @@
+{
+  "tilejson": "2.1.0",
+  "name": "shanxi_tongguanxian_dem_12m_4490",
+  "description": "",
+  "version": "1.1.0",
+  "format": "quantized-mesh-1.0",
+  "attribution": "",
+  "schema": "tms",
+  "tiles": [ "{z}/{x}/{y}.terrain?v={version}" ],
+  "projection": "EPSG:4326",
+  "bounds": [ 0.00, -90.00, 180.00, 90.00 ],
+  "available": [
+    [ { "startX": 1, "startY": 0, "endX": 1, "endY": 0 } ]
+   ,[ { "startX": 3, "startY": 1, "endX": 3, "endY": 1 } ]
+   ,[ { "startX": 6, "startY": 2, "endX": 6, "endY": 2 } ]
+   ,[ { "startX": 12, "startY": 5, "endX": 12, "endY": 5 } ]
+   ,[ { "startX": 25, "startY": 11, "endX": 25, "endY": 11 } ]
+   ,[ { "startX": 51, "startY": 22, "endX": 51, "endY": 22 } ]
+   ,[ { "startX": 103, "startY": 44, "endX": 103, "endY": 44 } ]
+   ,[ { "startX": 206, "startY": 88, "endX": 206, "endY": 88 } ]
+   ,[ { "startX": 412, "startY": 176, "endX": 413, "endY": 177 } ]
+   ,[ { "startX": 825, "startY": 353, "endX": 826, "endY": 354 } ]
+   ,[ { "startX": 1650, "startY": 707, "endX": 1652, "endY": 709 } ]
+   ,[ { "startX": 3301, "startY": 1415, "endX": 3304, "endY": 1418 } ]
+   ,[ { "startX": 6602, "startY": 2830, "endX": 6608, "endY": 2836 } ]
+   ,[ { "startX": 13205, "startY": 5661, "endX": 13217, "endY": 5672 } ]
+   ,[ { "startX": 26410, "startY": 11322, "endX": 26435, "endY": 11345 } ]
+  ]
+}
